@@ -114,7 +114,7 @@ public class Enemy_2 : MonoBehaviour
         _Right_Movementation = true;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
 
         if (collision.gameObject.CompareTag("Left_Limit"))

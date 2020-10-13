@@ -30,21 +30,28 @@ public class User : MonoBehaviour
         if (Input.GetKey(KeyCode.W))  
             _Rdb.velocity = _Up_Vector;
         
-
         if (Input.GetKey(KeyCode.S))    
             _Rdb.velocity = _Down_Vector;
         
-
         if (Input.GetKey(KeyCode.A))   
             _Rdb.velocity = _Left_Vector;
         
-
         if (Input.GetKey(KeyCode.D))  
             _Rdb.velocity = _Right_Vector;
-        
 
-        if (!Input.anyKeyDown)  
+
+        if (Input.GetKeyUp(KeyCode.W))
             _Rdb.velocity = Vector2.zero;
+
+        if (Input.GetKeyUp(KeyCode.S))
+            _Rdb.velocity = Vector2.zero;
+
+        if (Input.GetKeyUp(KeyCode.A))
+            _Rdb.velocity = Vector2.zero;
+
+        if (Input.GetKeyUp(KeyCode.D))
+            _Rdb.velocity = Vector2.zero;
+
         
 
     }
